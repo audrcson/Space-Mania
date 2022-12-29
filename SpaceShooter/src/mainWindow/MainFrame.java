@@ -11,10 +11,11 @@ public class MainFrame extends JFrame {
     public MainFrame()
     {
 
-        mainFrameBackground = new ImageIcon(this.getClass().getResource("/image/bg.png"));
+        mainFrameBackground = new ImageIcon(this.getClass().getResource("/image/bgpict.png"));
         mainLabel = new JLabel(mainFrameBackground);
         mainLabel.setSize(600,400);
         this.add(mainLabel);
+        this.setTitle("Space Mania");
         this.setSize(600,400);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setLocationRelativeTo(null);

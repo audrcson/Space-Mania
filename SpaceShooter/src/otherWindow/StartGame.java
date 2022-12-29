@@ -3,7 +3,7 @@ package otherWindow;
 import javax.swing.*;
 import java.awt.*;
 
-public class StartGame {
+public class StartGame extends JFrame{
     JFrame frame = new JFrame();
     private StartGamePanel startGamePanel;
     private ImageIcon modeFrameBackground;
@@ -11,16 +11,18 @@ public class StartGame {
 
     public StartGame() {
 
-        modeFrameBackground = new ImageIcon(this.getClass().getResource("/image/otherbg.png"));
+        modeFrameBackground = new ImageIcon(this.getClass().getResource("/image/Game Mode.png"));
         startGameLabel = new JLabel((modeFrameBackground));
         startGameLabel.setSize(600, 400);
-        frame.add(startGameLabel);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(600, 400);
-        frame.setLocationRelativeTo(null);
-        frame.setResizable(false);
-        frame.setVisible(true);
+        this.add(startGameLabel);
+        this.setTitle("Game Mode");
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.setSize(600, 400);
+        this.setLocationRelativeTo(null);
+        this.setResizable(false);
+        this.setVisible(true);
         this.startGamePanel = new StartGamePanel(this);
-        frame.setFocusable(false);
+        this.setFocusable(false);
+        this.getContentPane().add(startGamePanel);
     }
 }

@@ -2,7 +2,7 @@ package otherWindow;
 
 import javax.swing.*;
 
-public class Credits {
+public class Credits extends JFrame{
 
     JFrame frame = new JFrame();
     private CreditsPanel creditsPanel;
@@ -11,16 +11,19 @@ public class Credits {
 
     public Credits() {
 
-        creditsFrameBackground = new ImageIcon(this.getClass().getResource("/image/otherbg.png"));
+        creditsFrameBackground = new ImageIcon(this.getClass().getResource("/image/credits.png"));
         creditsLabel = new JLabel((creditsFrameBackground));
         creditsLabel.setSize(600, 400);
-        frame.add(creditsLabel);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(600, 400);
-        frame.setLocationRelativeTo(null);
-        frame.setResizable(false);
-        frame.setVisible(true);
+        this.add(creditsLabel);
+        this.setTitle("Credits");
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.setSize(600, 400);
+        this.setLocationRelativeTo(null);
+        this.setResizable(false);
+        this.setVisible(true);
+        this.setTitle("Credits");
         this.creditsPanel = new CreditsPanel(this);
-        frame.setFocusable(false);
+        this.setFocusable(false);
+        this.getContentPane().add(creditsPanel);
     }
 }
