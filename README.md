@@ -1,8 +1,12 @@
 # Space Mania
 
-Space Mania adalah sebuah game dua-dimensi tembakan pesawat. Sebagai player harus menembak alien atau musuh untuk mendapatkan poin dan menghindari tabrakan ataupun serangan dengan dan dari musuh agar hp tidak berkurang. Setiap player diberikan kesempatan tiga kali dan nilai hp 100. Game ini dibuat untuk memenuhi tugas besar mata kuliah Pemograman Berorientasi Objek. 
+Space Mania adalah sebuah game dua-dimensi tembakan pesawat. Sebagai player harus menembak alien atau musuh untuk mendapatkan poin dan menghindari tabrakan ataupun serangan dengan dan dari musuh agar hp tidak berkurang. Setiap player diberikan kesempatan tiga kali dan nilai hp 100.
 
 ## Fitur
+
+Space Mania mempunyai fitur:
+* Pesawat player maupun musuh yang dapat menembak seperti permainan pada umunya
+* Mencatat dan menampilkan nilai pada leaderboard 
 
 
 
@@ -26,6 +30,7 @@ Space Mania membutuhkan [Java] versi terbaru untuk berjalan.
 
 
 ### Menu Utama
+
 
 ### Start Game
 
