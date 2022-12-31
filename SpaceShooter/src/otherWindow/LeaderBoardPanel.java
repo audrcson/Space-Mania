@@ -17,7 +17,7 @@ public class LeaderBoardPanel extends JComponent implements ActionListener {
         this.mode = new JButton[2]; */
         this.setFocusable(false);
         this.lbWindow = otherWindow;
-      //  this.configureButton();
+        //  this.configureButton();
     }
 
     /*private void configureButton() {

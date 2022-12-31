@@ -1,5 +1,4 @@
 package otherWindow;
-
 import javax.swing.*;
 
 public class Credits extends JFrame{
@@ -27,3 +26,4 @@ public class Credits extends JFrame{
         this.getContentPane().add(creditsPanel);
     }
 }
+

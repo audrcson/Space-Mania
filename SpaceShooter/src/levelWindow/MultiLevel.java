@@ -25,3 +25,4 @@ public class MultiLevel extends JFrame {
         this.getContentPane().add(multilevelPanel);
     }
 }
+

@@ -1,6 +1,6 @@
 package otherWindow;
 
-import mainWindow.MainFrame;
+import mainWIndow.MainFrame;
 
 import javax.swing.*;
 import java.awt.*;

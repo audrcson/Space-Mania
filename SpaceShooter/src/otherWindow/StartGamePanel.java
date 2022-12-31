@@ -1,8 +1,9 @@
 package otherWindow;
 
+
 import levelWindow.MultiLevel;
 import levelWindow.SingleLevel;
-import mainWindow.MainFrame;
+import mainWIndow.MainFrame;
 
 import javax.swing.*;
 import java.awt.*;

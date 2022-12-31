@@ -25,3 +25,4 @@ public class SingleLevel extends JFrame {
         this.getContentPane().add(singlelevelPanel);
     }
 }
+
