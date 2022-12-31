@@ -9,6 +9,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
+import java.awt.geom.Area;
 import java.awt.image.BufferedImage;
 import java.security.Key;
 import java.util.ArrayList;
@@ -83,6 +84,16 @@ public class GameBoardPanelMedium extends JComponent {
     private void initObjectGame(){
         player1 = new Player1();
         player1.changeLocation(100,120);
+        enemys = new ArrayList<>();
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                while(start){
+                    addMusuh();
+                    sleep(2000);
+                }
+            }
+        }).start();
     }
 
 
@@ -97,6 +108,7 @@ public class GameBoardPanelMedium extends JComponent {
                         Fire fire = bullets.get(i);
                         if(fire != null){
                             fire.update();
+                            checkBullets(fire);
                             if (!fire.check(width,height)){
                                 bullets.remove(fire);
                             }
@@ -111,6 +123,19 @@ public class GameBoardPanelMedium extends JComponent {
         }).start();
     }
 
+    private void checkBullets(Fire fire) {
+        for (int i = 0; i < enemys.size(); i++) {
+            Musuh musuh = enemys.get(i);
+            if (musuh != null) {
+                Area area = new Area(fire.getShape());
+                area.intersect(musuh.getShape());
+                if (!area.isEmpty()) {
+                    enemys.remove(musuh);
+                    bullets.remove(fire);
+                }
+            }
+        }
+    }
 
     //keyboard control player1
     private void initKeyboard(){
@@ -196,6 +221,19 @@ public class GameBoardPanelMedium extends JComponent {
                     player1.update();
                     player1.changeAngle(angle);
                     player1.changeLocation(arahX,arahY);
+                    for (int i = 0; i < enemys.size(); i++) {
+                        Musuh musuh = enemys.get(i);
+                        if (musuh != null) {
+                            musuh.update();
+                            if (!musuh.check(width, height)) {
+                                enemys.remove(musuh);
+                            } //else {
+//                                if (player1.isAlive()) {
+//                                    checkPlayer(musuh);
+//                                }
+//                            }
+                        }
+                    }
                     sleep(5);
                 }
             }
@@ -217,6 +255,12 @@ public class GameBoardPanelMedium extends JComponent {
             Fire fire = bullets.get(i);
             if (fire != null) {
                 fire.draw(g2);
+            }
+        }
+        for (int i = 0; i < enemys.size(); i++) {
+            Musuh musuh = enemys.get(i);
+            if (musuh != null) {
+                musuh.draw(g2);
             }
         }
     }

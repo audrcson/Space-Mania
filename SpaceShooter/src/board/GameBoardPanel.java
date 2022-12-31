@@ -9,6 +9,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
+import java.awt.geom.Area;
 import java.awt.image.BufferedImage;
 import java.security.Key;
 import java.util.ArrayList;
@@ -74,10 +75,10 @@ public class GameBoardPanel extends JComponent {
     private void addMusuh() {
         Random ran = new Random();
         int locationY2 = ran.nextInt(height - 50) + 25;
-        Musuh rocket2 = new Musuh();
-        rocket2.changeLocation(width, locationY2);
-        rocket2.changeAngle(180);
-        enemys.add(rocket2);
+        Musuh musuh2 = new Musuh();
+        musuh2.changeLocation(width, locationY2);
+        musuh2.changeAngle(180);
+        enemys.add(musuh2);
     }
 
     //menampilkan posisi object
@@ -108,6 +109,7 @@ public class GameBoardPanel extends JComponent {
                         Fire fire = bullets.get(i);
                         if(fire != null){
                             fire.update();
+                            checkBullets(fire);
                             if (!fire.check(width,height)){
                                 bullets.remove(fire);
                             }
@@ -122,6 +124,19 @@ public class GameBoardPanel extends JComponent {
         }).start();
     }
 
+    private void checkBullets(Fire fire) {
+        for (int i = 0; i < enemys.size(); i++) {
+            Musuh musuh = enemys.get(i);
+            if (musuh != null) {
+                Area area = new Area(fire.getShape());
+                area.intersect(musuh.getShape());
+                if (!area.isEmpty()) {
+                    enemys.remove(musuh);
+                    bullets.remove(fire);
+                }
+            }
+        }
+    }
 
     //keyboard control player1
     private void initKeyboard(){
@@ -208,14 +223,14 @@ public class GameBoardPanel extends JComponent {
                     player1.changeAngle(angle);
                     player1.changeLocation(arahX,arahY);
                     for (int i = 0; i < enemys.size(); i++) {
-                        Musuh rocket = enemys.get(i);
-                        if (rocket != null) {
-                            rocket.update();
-//                            if (!rocket.check(width, height)) {
-//                                enemys.remove(rocket);
-//                            } else {
+                        Musuh musuh = enemys.get(i);
+                        if (musuh != null) {
+                            musuh.update();
+                            if (!musuh.check(width, height)) {
+                                enemys.remove(musuh);
+                            } //else {
 //                                if (player1.isAlive()) {
-//                                    checkPlayer(rocket);
+//                                    checkPlayer(musuh);
 //                                }
 //                            }
                         }
@@ -244,9 +259,9 @@ public class GameBoardPanel extends JComponent {
             }
         }
         for (int i = 0; i < enemys.size(); i++) {
-            Musuh rocket = enemys.get(i);
-            if (rocket != null) {
-                rocket.draw(g2);
+            Musuh musuh = enemys.get(i);
+            if (musuh != null) {
+                musuh.draw(g2);
             }
         }
     }

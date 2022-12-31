@@ -3,6 +3,7 @@ package entity;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.geom.AffineTransform;
+import java.awt.geom.Area;
 import java.awt.geom.Ellipse2D;
 
 public class Fire {
@@ -64,6 +65,10 @@ public class Fire {
         else {
             return true;
         }
+    }
+
+    public Shape getShape() {
+        return new Area(new Ellipse2D.Double(x,y,size,size));
     }
 }
 

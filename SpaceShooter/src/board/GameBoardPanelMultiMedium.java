@@ -89,6 +89,16 @@ public class GameBoardPanelMultiMedium extends JComponent {
         player1.changeLocation(100,120);
         player2 = new Player2();  //multi baru munculin
         player2.changeLocation(100, 240);
+        enemys = new ArrayList<>();
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                while(start){
+                    addMusuh();
+                    sleep(2000);
+                }
+            }
+        }).start();
     }
 
 
@@ -223,6 +233,19 @@ public class GameBoardPanelMultiMedium extends JComponent {
                     player1.update();
                     player1.changeAngle(angle);
                     player1.changeLocation(arahX,arahY);
+                    for (int i = 0; i < enemys.size(); i++) {
+                        Musuh musuh = enemys.get(i);
+                        if (musuh != null) {
+                            musuh.update();
+                            if (!musuh.check(width, height)) {
+                                enemys.remove(musuh);
+                            } //else {
+//                                if (player1.isAlive()) {
+//                                    checkPlayer(musuh);
+//                                }
+//                            }
+                        }
+                    }
                     sleep(4);
                 }
             }
@@ -341,6 +364,12 @@ public class GameBoardPanelMultiMedium extends JComponent {
             Fire2 fire2 = bullets2.get(i);
             if (fire2 != null) {
                 fire2.draw(g2);
+            }
+        }
+        for (int i = 0; i < enemys.size(); i++) {
+            Musuh musuh = enemys.get(i);
+            if (musuh != null) {
+                musuh.draw(g2);
             }
         }
     }
