@@ -50,8 +50,8 @@ Ingin berkontribusi? Sangat baik!
 ## Contributors
 
 * Jenny Febiyola Sari
-* Muhammad Fajar Immanul Haq
-* Muhammad Ajis
+* Muhamad Ajis
+* Muhamad Fajar Imanul Haq
 * [Rifqi Ambari](https://www.linkedin.com/in/rifqi-ambari-966303237/?originalSubdomain=id) - 2106806
 * Tiara Yusti D
 
