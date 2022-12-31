@@ -49,7 +49,7 @@ Ingin berkontribusi? Sangat baik!
 
 ## Contributors
 
-* Jenny Febiyola Sari
+* Jenni Febiyola Sari
 * Muhamad Ajis
 * Muhamad Fajar Imanul Haq
 * [Rifqi Ambari](https://www.linkedin.com/in/rifqi-ambari-966303237/?originalSubdomain=id) - 2106806
