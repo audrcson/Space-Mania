@@ -5,7 +5,7 @@ Space Mania adalah sebuah game dua-dimensi tembakan pesawat. Sebagai player haru
 ## Fitur
 
 Space Mania mempunyai fitur:
-* Pesawat player maupun musuh yang dapat menembak seperti permainan pada umunya
+* Pesawat single player dan multiplayer yang dapat menembak musuh
 * Mencatat dan menampilkan nilai pada leaderboard 
 
 
@@ -23,21 +23,53 @@ Space Mania menggunakan beberapa teknologi open source untuk berjalan dengan bai
 
 Space Mania membutuhkan [Java] versi terbaru untuk berjalan.
 
-## Instalasi
+## Class Diagram
+
+# Tampilan Aplikasi
+
+## Screen 1 - Main Menu
+
+Main menu merupakan tampilan awal ketika membuka game. Pada frame ini terdapat 4 button yang mempunyai fungsinya masing- masing. 
+
+![image](https://user-images.githubusercontent.com/107100732/210159712-a244645b-3fbe-40cd-9e13-40ea51890e43.png)
+
+## Screen 2 - Game Mode
+Jika kita klik button Start Game, maka akan masuk ke screen 2 yaitu Game MOde, disini kita bisa memilih mode Single Player atau Multiplayer untuk bermain game.
+
+! <img width="448" alt="image" src="https://user-images.githubusercontent.com/107100732/210159960-0d91af4d-6d72-421e-ab57-6e4a4a26315d.png">
+
+## Screen 3 - Level Game
+Setelah memilih mode game, selanjutnya akan masuk ke screen 3 yaitu Level Game. Pada frame ini terdapat 3 pilihan level game, yakni easy, medium, dan hard.
+
+<img width="446" alt="image" src="https://user-images.githubusercontent.com/107100732/210160022-1cf0c139-aadf-4f43-af70-67a620410dd3.png">
+
+## Screen 4 - Game
+Setelah memilih level lalu akan masuk ke screen 4, yang dimana pada screen ini game akan berlangsung.
+
+### Single Player
+![image](https://user-images.githubusercontent.com/107100732/210160058-9f7b3184-9f1f-42f1-be4b-e6ac17cf8043.png)
+
+### MultiPlayer
+![image](https://user-images.githubusercontent.com/107100732/210160069-fc794f01-b883-42ad-8505-73206d22dacf.png)
 
 
-## Cara Bermain
+# Cara Bermain Game
+Adapun tata cara memainkan game ini, yaitu:
+a.	Player 1
+1)	Tombol A untuk bergerak ke arah kiri
+2)	Tombol W untuk bergerak ke arah atas
+3)	Tombol S untuk bergerak ke arah bawah
+4)	Tombol D untuk bergerak ke arah kanan
+5)	Tombol C untuk menembak
+
+b.	Player 2
+1)	Tombol arah kiri untuk bergerak ke arah kiri
+2)	Tombol arah atas untuk bergerak ke arah atas
+3)	Tombol arah bawah untuk bergerak ke arah bawah
+4)	Tombol arah kanan untuk bergerak ke arah kanan
+5)	Tombol N untuk menembak
 
 
-### Menu Utama
-
-
-### Start Game
-
-
-## Development
-
-Ingin berkontribusi? Sangat baik! 
 
 [//]: # (## License)
 
@@ -49,16 +81,16 @@ Ingin berkontribusi? Sangat baik!
 
 ## Contributors
 
-* Jenni Febiyola Sari
-* Muhamad Ajis
-* Muhamad Fajar Imanul Haq
-* [Rifqi Ambari](https://www.linkedin.com/in/rifqi-ambari-966303237/?originalSubdomain=id) - 2106806
-* Tiara Yusti D
+* Jenni Febiyola Sari - 2100175
+* Muhamad Ajis - 2101942
+* Muhamad Fajar Imanul Haq - 2107617
+* Rifqi Ambari - 2106806
+* Tiara Yusti D - 2103219
 
 ## Acknowledgement
 
 [//]: # (Berisi Referensi)
 
 * 
-* [Dosen Pengampu]
+* Dosen Pengampu : Ibu Liptia Venica, S. T., M. T.
 * 
