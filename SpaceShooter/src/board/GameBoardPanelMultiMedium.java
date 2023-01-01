@@ -6,6 +6,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
+import java.awt.geom.Area;
 import java.awt.image.BufferedImage;
 import java.security.Key;
 import java.util.ArrayList;
@@ -112,6 +113,7 @@ public class GameBoardPanelMultiMedium extends JComponent {
                         Fire fire = bullets.get(i);
                         if(fire != null){
                             fire.update();
+                            checkBullets(fire);
                             if (!fire.check(width,height)){
                                 bullets.remove(fire);
                             }
@@ -135,6 +137,7 @@ public class GameBoardPanelMultiMedium extends JComponent {
                         Fire2 fire2 = bullets2.get(i);
                         if(fire2 != null){
                             fire2.update();
+                            checkBullets2(fire2);
                             if (!fire2.check2(width,height)){
                                 bullets2.remove(fire2);
                             }
@@ -149,6 +152,32 @@ public class GameBoardPanelMultiMedium extends JComponent {
         }).start();
     }
 
+    private void checkBullets(Fire fire) {
+        for (int i = 0; i < enemys.size(); i++) {
+            Musuh musuh = enemys.get(i);
+            if (musuh != null) {
+                Area area = new Area(fire.getShape());
+                area.intersect(musuh.getShape());
+                if (!area.isEmpty()) {
+                    enemys.remove(musuh);
+                    bullets.remove(fire);
+                }
+            }
+        }
+    }
+    private void checkBullets2(Fire2 fire2) {
+        for (int i = 0; i < enemys.size(); i++) {
+            Musuh musuh = enemys.get(i);
+            if (musuh != null) {
+                Area area = new Area(fire2.getShape());
+                area.intersect(musuh.getShape());
+                if (!area.isEmpty()) {
+                    enemys.remove(musuh);
+                    bullets.remove(fire2);
+                }
+            }
+        }
+    }
     //keyboard control player1
     private void initKeyboard(){
         key = new Keyboard();
