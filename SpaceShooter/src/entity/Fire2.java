@@ -65,5 +65,8 @@ public class Fire2 {
             return true;
         }
     }
+    public Shape getShape() {
+        return new Area(new Ellipse2D.Double(x,y,size,size));
+    }
 }
 
