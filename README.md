@@ -86,7 +86,7 @@ Adapun tata cara memainkan game ini, yaitu:
 
 ## Acknowledment
 
-https://youtu.be/OdWEhPyp5_o Diakses Pada 12 Desember 2022.
+https://www.youtube.com/playlist?list=PLyt2v1LVXYS2SSQkm1bIn1FRsg3BPez06 Diakses Pada 12 Desember 2022.
 
 ## Dosen Pengampu
 
