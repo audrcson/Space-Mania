@@ -137,7 +137,7 @@ public class GameBoardPanelMultiHard extends JComponent {
                         Fire2 fire2 = bullets2.get(i);
                         if(fire2 != null){
                             fire2.update();
-                            checkBullets(fire2);
+                            checkBullets2(fire2);
                             if (!fire2.check2(width,height)){
                                 bullets2.remove(fire2);
                             }
@@ -160,6 +160,19 @@ public class GameBoardPanelMultiHard extends JComponent {
                 if (!area.isEmpty()) {
                     enemys.remove(musuh);
                     bullets.remove(fire);
+                }
+            }
+        }
+    }
+    private void checkBullets2(Fire2 fire2) {
+        for (int i = 0; i < enemys.size(); i++) {
+            Musuh musuh = enemys.get(i);
+            if (musuh != null) {
+                Area area = new Area(fire2.getShape());
+                area.intersect(musuh.getShape());
+                if (!area.isEmpty()) {
+                    enemys.remove(musuh);
+                    bullets.remove(fire2);
                 }
             }
         }
