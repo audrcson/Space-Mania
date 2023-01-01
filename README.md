@@ -55,14 +55,14 @@ Setelah memilih level lalu akan masuk ke screen 4, yang dimana pada screen ini g
 
 # Cara Bermain Game
 Adapun tata cara memainkan game ini, yaitu:
-* a.	Player 1
+* Player 1
 1)	Tombol A untuk bergerak ke arah kiri
 2)	Tombol W untuk bergerak ke arah atas
 3)	Tombol S untuk bergerak ke arah bawah
 4)	Tombol D untuk bergerak ke arah kanan
 5)	Tombol C untuk menembak
 
-b.	Player 2
+* Player 2
 1)	Tombol arah kiri untuk bergerak ke arah kiri
 2)	Tombol arah atas untuk bergerak ke arah atas
 3)	Tombol arah bawah untuk bergerak ke arah bawah
