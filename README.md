@@ -34,7 +34,7 @@ Main menu merupakan tampilan awal ketika membuka game. Pada frame ini terdapat 4
 ![image](https://user-images.githubusercontent.com/107100732/210159712-a244645b-3fbe-40cd-9e13-40ea51890e43.png)
 
 ## Screen 2 - Game Mode
-Jika kita klik button Start Game, maka akan masuk ke screen 2 yaitu Game MOde, disini kita bisa memilih mode Single Player atau Multiplayer untuk bermain game.
+Jika kita klik button Start Game, maka akan masuk ke screen 2 yaitu Game Mode, disini kita bisa memilih mode Single Player atau Multiplayer untuk bermain game.
 
 ! <img width="448" alt="image" src="https://user-images.githubusercontent.com/107100732/210159960-0d91af4d-6d72-421e-ab57-6e4a4a26315d.png">
 
