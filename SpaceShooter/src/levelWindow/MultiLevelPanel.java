@@ -33,7 +33,22 @@ public class MultiLevelPanel extends JComponent implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        if(e.getSource() == level[3]) {
+         if(e.getSource() == level[0]){
+            GameBoardFrameMulti gb = new GameBoardFrameMulti();
+            levelWindow.setVisible(false);
+            levelWindow.dispose();
+        }
+        else if(e.getSource() == level[1]){
+            GameBoardFrameMultiMedium gb = new GameBoardFrameMultiMedium();
+            levelWindow.setVisible(false);
+            levelWindow.dispose();
+        }
+        else if(e.getSource() == level[2]){
+            GameBoardFrameMultiHard gb = new GameBoardFrameMultiHard();
+            levelWindow.setVisible(false);
+            levelWindow.dispose();
+        }
+        else if(e.getSource() == level[3]) {
             StartGame sg = new StartGame();
             levelWindow.setVisible(false);
             levelWindow.dispose();
