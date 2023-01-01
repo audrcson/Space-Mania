@@ -84,7 +84,7 @@ Adapun tata cara memainkan game ini, yaitu:
 * Rifqi Ambari - 2106806
 * Tiara Yusti D - 2103219
 
-## Referensi
+## Acknowledment
 
 https://youtu.be/OdWEhPyp5_o Diakses Pada 12 Desember 2022.
 
