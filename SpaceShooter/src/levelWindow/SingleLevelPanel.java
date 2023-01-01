@@ -33,7 +33,22 @@ public class SingleLevelPanel extends JComponent implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        if(e.getSource() == level[3]) {
+      if(e.getSource() == level[0]){
+            GameBoardFrame gb = new GameBoardFrame();
+            levelWindow.setVisible(false);
+            levelWindow.dispose();
+        }
+        else if(e.getSource() == level[1]){
+            GameBoardFrameMedium gb = new GameBoardFrameMedium();
+            levelWindow.setVisible(false);
+            levelWindow.dispose();
+        }
+        else if(e.getSource() == level[2]){
+            GameBoardFrameHard gb = new GameBoardFrameHard();
+            levelWindow.setVisible(false);
+            levelWindow.dispose();
+        }
+        else if(e.getSource() == level[3]) {
             StartGame sg = new StartGame();
             levelWindow.setVisible(false);
             levelWindow.dispose();
