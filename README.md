@@ -16,12 +16,9 @@ Space Mania menggunakan beberapa teknologi open source untuk berjalan dengan bai
 
 * [Java](https://www.java.com/en/) - Java adalah bahasa pemrograman yang bersifat general-purpose, berorientasi objek, dan berbasis kelas.
 * [IntelliJ IDEA](https://www.jetbrains.com/idea/) - IntelliJ IDEA adalah sebuah Integrated Development Environment (IDE) yang dikembangkan oleh JetBrains untuk bahasa pemrograman Java.
+* [Apache Netbeans](https://netbeans.apache.org/) - Apache Netbeans adalah sebuah Integrated Development Environment (IDE) pengembangan perangkat lunak yang ditulis dalam bahasa pemrograman Java.
 * [MySQL](https://www.mysql.com/) - MySQL adalah sebuah sistem manajemen basis data (SMBD) yang berbasis SQL (Structured Query Language) yang dikembangkan oleh Oracle Corporation.
 
-
-## Requirement
-
-Space Mania membutuhkan [Java] versi terbaru untuk berjalan.
 
 ## Class Diagram
 
