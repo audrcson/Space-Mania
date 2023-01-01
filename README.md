@@ -22,6 +22,11 @@ Space Mania menggunakan beberapa teknologi open source untuk berjalan dengan bai
 
 ## Class Diagram
 
+![Class Diagram 1](https://user-images.githubusercontent.com/107100732/210160936-3fb15ad2-5ed5-4f99-aad7-b76d6952e1fc.jpeg)
+
+![Class Diagram 2](https://user-images.githubusercontent.com/107100732/210160939-5c142de5-5872-47e3-82df-b37882298a3d.jpeg)
+
+
 # Tampilan Aplikasi
 
 ## Screen 1 - Main Menu
