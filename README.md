@@ -55,7 +55,7 @@ Setelah memilih level lalu akan masuk ke screen 4, yang dimana pada screen ini g
 
 # Cara Bermain Game
 Adapun tata cara memainkan game ini, yaitu:
-a.	Player 1
+* a.	Player 1
 1)	Tombol A untuk bergerak ke arah kiri
 2)	Tombol W untuk bergerak ke arah atas
 3)	Tombol S untuk bergerak ke arah bawah
@@ -87,10 +87,11 @@ b.	Player 2
 * Rifqi Ambari - 2106806
 * Tiara Yusti D - 2103219
 
-## Acknowledgement
+## Referensi
 
-[//]: # (Berisi Referensi)
+https://youtu.be/OdWEhPyp5_o Diakses Pada 12 Desember 2022.
 
-* 
-* Dosen Pengampu : Ibu Liptia Venica, S. T., M. T.
-* 
+## Dosen Pengampu
+
+Ibu Liptia Venica, S. T., M. T.
+ 
