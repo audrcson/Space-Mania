@@ -1,7 +1,6 @@
 package board;
 
 //ini harusnya jadi menu game pas mulai
-import mainWIndow.MainFrame;
 
 import javax.swing.*;
 import java.awt.*;
