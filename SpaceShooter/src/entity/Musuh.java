@@ -13,7 +13,7 @@ public class Musuh {
     private final Image image;
     private  float angle = 0;
     private final Area rocketShap;
-
+    private int score = 50;
 
     public Musuh(){
 
@@ -57,6 +57,9 @@ public class Musuh {
 
     public float getAngle(){
         return angle;
+    }
+    public int getScore(){
+        return  score;
     }
 
     public Area getShape() {
