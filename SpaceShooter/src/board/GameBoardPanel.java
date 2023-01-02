@@ -27,6 +27,7 @@ public class GameBoardPanel extends JComponent {
     private boolean start = true;
     private Keyboard key;
     private int shootTime;
+    private int score;
 
     //FPS
     private final int FPS = 60;
@@ -59,6 +60,18 @@ public class GameBoardPanel extends JComponent {
                     if(time<TARGET_TIME){
                         long sleep=(TARGET_TIME - time) / 1000000;
                         sleep(sleep);
+                    }
+                    if (score > 500) {
+                        start = false;
+                        while (!start) {
+                            startTime = System.nanoTime();
+                            drawBackground();
+                            drawEnd(g2);
+                            render();
+                            time = System.nanoTime() - startTime;
+                            db.save();
+                        }
+
                     }
 
                 }
@@ -133,6 +146,7 @@ public class GameBoardPanel extends JComponent {
                 if (!area.isEmpty()) {
                     enemys.remove(musuh);
                     bullets.remove(fire);
+                    score += musuh.getScore();
                 }
             }
         }
